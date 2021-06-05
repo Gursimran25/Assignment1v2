@@ -1,7 +1,7 @@
 body {
     font-family: sans-serif;
     padding-left: 1em;
-    background-color: deepskyblue;
+    background-color: lightcyan;
     position: absolute;
 }
 label {
@@ -19,4 +19,18 @@ button {
 function {
     font-width: bold;
     color: blueviolet;
+}
+a {
+    color: #0288D1;
+    font-weight: bolder;
+    text-decoration: black;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+p {
+    color: aqua;
+    font-size: medium;
+    text-decoration: darkred;
 }
