@@ -9,7 +9,7 @@ import org.springframework.web.client.RestTemplate;
 
 public class Controller {
     @GetMapping("/playagame")
-    public String playRoshambo(@RequestParam(name = "choice", required=false) String choice, Model model) {
+    public String playSimran(@RequestParam(name = "choice", required=false) String choice, Model model) {
         System.out.println("In play");
         if (choice == null) {
             return "index";

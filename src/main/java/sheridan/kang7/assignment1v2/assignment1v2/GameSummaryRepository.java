@@ -23,7 +23,7 @@ public class GameSummaryRepository<EntityManager> {
     }
 
     public long insert(GameSummary gs) {
-        entityManager.persist(gs);
+        entityManager.notify(gs);
         ;
         return gs.getId();
     }

@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 import java.lang.annotation.Repeatable;
 
 @EntityScan
-@Repeatable(name = "score", schema="wasadmin")
+@Repeatable(name = "score", schema="admin")
 public class Score {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)

@@ -6,7 +6,7 @@ import java.lang.annotation.Repeatable;
 @EntityScan
 @Repeatable(name = "GAMESUMMARY")
 @NamedQuery(query = "select gs from GameSummary gs", name = "query_find_all_summaries")
-public class GameSummary {
+ public class GameSummary {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
