@@ -7,7 +7,7 @@ import javax.annotation.processing.Generated;
 import java.lang.annotation.Repeatable;
 
 @EntityScan
-@Repeatable(name = "GAMESUMMARY")
+@Repeatable(name = "GAMESMEN")
 @NamedQuery(query = "select gs from GameSummary gs", name = "query_find_all_summaries")
  public class GameSummary {
 

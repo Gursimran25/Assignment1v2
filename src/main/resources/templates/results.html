@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Wait a moment....</title>
+</head>
+<body>
+
+<a href="playtime?choice=rock">rock</a>
+<a href="playtime?choice=paper">paper</a>
+<a href="playtime?choice=scissors">scissors</a>
+
+
+
+<p th:text="'Wins: ' + ${score.wins} + '!'" />
+<p th:text="'Ties, ' + ${score.ties} + '!'" />
+<p th:text="'Losses, ' + ${score.losses} + '!'" />
+
+</body>
+</html>

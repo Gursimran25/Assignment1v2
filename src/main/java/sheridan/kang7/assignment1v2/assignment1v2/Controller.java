@@ -8,7 +8,7 @@ import org.springframework.web.client.RestTemplate;
 @org.springframework.stereotype.Controller
 
 public class Controller {
-    @GetMapping("/playagame")
+    @GetMapping("/playtime")
     public String playSimran(@RequestParam(name = "choice", required=false) String choice, Model model) {
         System.out.println("In play");
         if (choice == null) {
@@ -47,7 +47,7 @@ public class Controller {
         return "results";
     }
 
-    @GetMapping("/index")
+    @GetMapping("/input")
     public String index(@RequestParam(name = "choice", required=false) String choice, Model model) {
         return "index";
     }

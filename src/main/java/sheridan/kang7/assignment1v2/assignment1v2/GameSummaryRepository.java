@@ -18,7 +18,7 @@ public class GameSummaryRepository<EntityManager> {
     }
 
     public List<GameSummary> findAll() {
-        Query query = (Query) entityManager.clone("query_find_all_summaries", GameSummary.class);
+        Query query = (Query) entityManager.find("query_find_all_summaries", GameSummary.class);
         return query.getResultList();
     }
 
