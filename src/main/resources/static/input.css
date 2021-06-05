@@ -1,0 +1,17 @@
+body {
+    font-family: sans-serif;
+    padding-left: 1em;
+    background-color: antiquewhite;
+}
+label {
+    font-weight: bold;
+    color: dodgerblue;
+}
+button {
+    font-width: bold;
+    color: blue;
+}
+function {
+    font-width: bold;
+    color: blueviolet;
+}
