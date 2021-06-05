@@ -24,21 +24,21 @@ public class Controller {
         if (gameSummary.clientGesture.equals(Gesture.PAPER)) {
             result = "win";
             RestTemplate restTemplate = new RestTemplate();
-            restTemplate.postForObject("http://localhost:8080/score/wins", "", Object.class);
+            restTemplate.postForObject("http://localhost:63342/score/wins", "", Object.class);
         }
         if (gameSummary.clientGesture.equals(Gesture.SCISSORS)) {
             result = "lose";
             RestTemplate restTemplate = new RestTemplate();
-            restTemplate.postForObject("http://localhost:8080/score/losses", "", Object.class);
+            restTemplate.postForObject("http://localhost:63342/score/losses", "", Object.class);
         }
         if (result == "tie") {
             RestTemplate restTemplate = new RestTemplate();
-            restTemplate.postForObject("http://localhost:8080/score/ties", "", Object.class);
+            restTemplate.postForObject("http://localhost:63342/score/ties", "", Object.class);
         }
         gameSummary.setResult(result);
 
         RestTemplate restTemplate = new RestTemplate();
-        Score score = restTemplate.getForObject("http://localhost:8080/score", Score.class);
+        Score score = restTemplate.getForObject("http://localhost:63342/score", Score.class);
 
         model.addAttribute("gameSummary", gameSummary);
         model.addAttribute("score", score);

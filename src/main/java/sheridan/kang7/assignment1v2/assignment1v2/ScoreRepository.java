@@ -32,8 +32,7 @@ public class ScoreRepository {
         Query query = entityManager.createNamedQuery("query_find_all_scores", Score.class);
         List scores = query.getResultList();
         System.out.println("Number of scores: " + scores.size());
-        if (scores.size()>0) {
-            //score = (Score)scores.get(0);
+        if (scores.setSize()>0) {
             score = entityManager.find(Score.class, new long[1]);
         } else {
             score = new Score();
