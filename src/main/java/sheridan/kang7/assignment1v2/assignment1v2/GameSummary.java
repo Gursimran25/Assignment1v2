@@ -1,6 +1,9 @@
 package sheridan.kang7.assignment1v2.assignment1v2;
 
+import com.fasterxml.jackson.annotation.JsonEnumDefaultValue;
+import com.fasterxml.jackson.annotation.JsonTypeId;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
+import javax.annotation.processing.Generated;
 import java.lang.annotation.Repeatable;
 
 @EntityScan
@@ -8,12 +11,13 @@ import java.lang.annotation.Repeatable;
 @NamedQuery(query = "select gs from GameSummary gs", name = "query_find_all_summaries")
  public class GameSummary {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @JsonTypeId
+    @Generated(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Enumerated(EnumType.STRING)
+    @JsonEnumDefaultValue(EnumType.STRING)
     Gesture clientGesture;
-    @Enumerated(EnumType.STRING)
+    private Object EnumType;
+    @JsonEnumDefaultValue(EnumType.STRING)
     Gesture serverGesture;
     String result;
     java.util.Date date = new java.util.Date();

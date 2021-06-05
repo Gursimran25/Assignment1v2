@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel = "stylesheet" href="../static/css/input.css" th:href ="@{css/input.css}">
     <title>ROCK PAPER SCISSOR!!!</title>
 </head>
 <body>
@@ -79,7 +80,7 @@
             this.ties++;
         }
         this.toString = function(){
-            output = "Wins: " + this.wins + " Ties: " + this.ties + " Losses: " + this.losses;
+            const output = "Wins: " + this.wins + " Ties: " + this.ties + " Losses: " + this.losses;
             return output;
         }
     }
@@ -121,7 +122,8 @@
 
 <script>
     let theScore = new Score();
-    var gameHistory =[];
+    const gameHistory = [];
+
     function GameService() {
 
         this.getScore = function() {
