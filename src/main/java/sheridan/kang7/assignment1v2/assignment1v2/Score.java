@@ -1,8 +1,11 @@
 package sheridan.kang7.assignment1v2.assignment1v2;
 
-@Entity
-@Table(name = "score", schema="wasadmin")
-@NamedQuery(query = "select s from Score s", name = "query_find_all_scores")
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+
+import java.lang.annotation.Repeatable;
+
+@EntityScan
+@Repeatable(name = "score", schema="wasadmin")
 public class Score {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)

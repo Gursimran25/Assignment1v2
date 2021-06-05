@@ -1,7 +1,12 @@
 package sheridan.kang7.assignment1v2.assignment1v2;
 
+import org.springframework.boot.autoconfigure.quartz.QuartzTransactionManager;
+import org.springframework.stereotype.Repository;
+import javax.management.Query;
+import java.awt.*;
+
 @Repository
-@Transactional
+@QuartzTransactionManager
 public class ScoreRepository {
     @PersistenceContext
     private EntityManager entityManager;
@@ -29,7 +34,7 @@ public class ScoreRepository {
         System.out.println("Number of scores: " + scores.size());
         if (scores.size()>0) {
             //score = (Score)scores.get(0);
-            score = entityManager.find(Score.class, new Long(1));
+            score = entityManager.find(Score.class, new long[1]);
         } else {
             score = new Score();
             score.setId(System.currentTimeMillis());

@@ -1,9 +1,15 @@
 package sheridan.kang7.assignment1v2.assignment1v2;
 
-@Repository
-@Transactional
+import org.springframework.boot.autoconfigure.quartz.QuartzTransactionManager;
+import org.springframework.stereotype.Repository;
 
-public class GameSummaryRepository {
+import javax.management.Query;
+import java.util.List;
+
+@Repository
+@QuartzTransactionManager
+
+public class GameSummaryRepository<EntityManager> {
     @PersistenceContext
     private EntityManager entityManager;
 

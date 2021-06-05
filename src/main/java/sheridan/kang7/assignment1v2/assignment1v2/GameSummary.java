@@ -1,7 +1,10 @@
 package sheridan.kang7.assignment1v2.assignment1v2;
 
-@Entity
-@Table(name = "GAMESUMMARY")
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import java.lang.annotation.Repeatable;
+
+@EntityScan
+@Repeatable(name = "GAMESUMMARY")
 @NamedQuery(query = "select gs from GameSummary gs", name = "query_find_all_summaries")
 public class GameSummary {
 
